@@ -1,0 +1,25 @@
+create database productsdb;
+
+use productsdb
+
+create table products 
+(
+    product_id int auto_increment primary key,
+    product_name char(80) not null,
+    company_name char(60) not null,
+    price int not null,
+    quantity int not null,
+    discount float not null,
+    production_date date not null
+);
+
+insert into products (product_name, company_name, price, quantity, discount, production_date) value (?, ?, ?, ?, ?, ?);
+
+select * from products limit 3;
+
+select * from products order by product_id desc;
+
+select * from products order by product_id desc limit 3;
+
+select * from products order by product_id limit 3,5;
+
